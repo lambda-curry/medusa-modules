@@ -1,0 +1,48 @@
+{
+  "include": ["remix.env.d.ts", "app", "libs", "types"],
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2019", "ES2021.String"],
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "target": "ES2019",
+    "strict": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noImplicitReturns": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "~/*": ["./app/*"],
+      "@marketplace/ui-components/*": ["./libs/ui-components/*"],
+      "@marketplace/util/*": ["./libs/util/*"],
+      "@sentry/remix": ["./node_modules/@sentry/remix"],
+      "@remix-run/react": ["./node_modules/@remix-run/react"],
+      "remix-validated-form": ["./node_modules/remix-validated-form"],
+      "@remix-validated-form/with-yup": [
+        "./node_modules/@remix-validated-form/with-yup"
+      ],
+      "use-debounce": ["./node_modules/use-debounce"],
+      "@headlessui/react": ["./node_modules/@headlessui/react"],
+      "react-use-pagination": ["./node_modules/react-use-pagination"],
+      "@stripe/react-stripe-js": ["./node_modules/@stripe/react-stripe-js"],
+      "usehooks-ts": ["./node_modules/usehooks-ts"],
+      "react-player": ["./node_modules/react-player"]
+    },
+
+    // Remix takes care of building everything in `remix build`.
+    "noEmit": true
+  }
+}
