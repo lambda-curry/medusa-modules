@@ -1,0 +1,6 @@
+.env.*
+.cache
+build
+public/build
+app/tailwind.css
+prod.package.json
